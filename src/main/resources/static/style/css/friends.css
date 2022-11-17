@@ -1,0 +1,31 @@
+body{
+    font-size: 13px;
+    font-family: Open Sans, sans-serif;
+    background-color: lightskyblue;
+}
+
+.navbar-brand {
+    font-size: 15px;
+    font-family: Open Sans, sans-serif;
+}
+.btn-friends {
+    height: 27px;
+}
+.form-control-sm {
+    font-size: 13px;
+}
+
+.bd-callout-info {
+    border-left-color: #5bc0de;
+}
+.bd-callout-warning2 {
+    border-left-color: #f0ad4e;
+}
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}

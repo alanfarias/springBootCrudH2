@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <title>Alan's - portifolio</title>
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/style/themify/icons.css}"/>
+        <link rel="stylesheet" th:href="@{/style/css/friends.css}"/>
+        <link rel="stylesheet" th:href="@{/datatable/css/jquery.dataTables.min.css}"/>
+        <link rel="shortcut icon" th:href="@{/style/images/logo.ico}" type="image/x-icon"/>
+    </head>
+    <body>
+    	<br>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="">
+                    <img th:src="@{/style/images/logo.png}" width="50" height="50" alt=""/>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/"><i class="ti-home"></i> Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="card">
+                <div class="card-header" style="text-align: center;">
+                    <b>Lista de participantes</b>
+                </div>
+                <div class="card-body">
+                	<table id="example" class="display compact" style="width:100%">
+                    	<thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Nascimento</th>
+                                <th>Sexo</th>
+                                <th>Cargo</th>
+                                <th>Escritório</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="participant : ${participants}">
+                                <td th:text="${participant.name}"></td>
+                                <td th:text="${#dates.format(participant.birth, 'yyyy-MM-dd')}"></td>
+                                <td th:text="${participant.gender}=='M' ? 'Masculino' : 'Feminino'"></td>
+                                <td th:text="${participant.position}"></td>
+                                <td th:text="${participant.office}"></td>
+                                
+                                <td>
+                                    <a th:href="@{/participant/edit/{id}(id=${participant.id})}" class="btn btn-sm btn-friends btn-primary" title="Editar"><i class="ti-pencil"></i></a>
+                                    <a th:href="@{/participant/delete/{id}(id=${participant.id})}" class="btn btn-sm btn-friends btn-danger" title="Excluir"><i class="ti-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+				<div class="card-body">
+					<a href="/" type="button" class="btn btn-sm btn-info" title="Voltar"><i class="">Voltar</i></a> &nbsp;
+					<a href="/participant/add" type="button" class="btn btn-sm btn-primary" title="Novo"><i class="">Novo</i></a> 					
+				</div>
+            </div>
+            <footer class="page-footer font-small blue">
+            </footer>
+        </div>
+		
+        <script th:src="@{/jquery/jquery-3.5.1.js}"></script>
+        <script th:src="@{/datatable/js/jquery.dataTables.min_.js}"></script>
+        <script th:src="@{/datatable/js/translate.js}"></script>
+        <script th:src="@{/datatable/js/datatables.start.min.js}"></script>
+    </body>
+</html>

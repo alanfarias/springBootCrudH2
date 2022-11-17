@@ -1,0 +1,12 @@
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (1, 'Alan Menezes', 'M', '1999-11-30', 'Senior Javascript Developer', 'Sydney');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (2, 'Britney Spears', 'F', '2000-12-15', 'Junior Technical Author', 'San Francisco');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (3, 'Jennifer Lopez', 'F', '1990-10-22', 'Junior Technical Author', 'San Francisco');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (4, 'Selena Gomez', 'F', '1981-11-18', 'Integration Specialist', 'Edinburgh');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (5, 'Justin Bieber', 'M', '2001-07-23', 'Integration Specialist', 'Edinburgh');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (6, 'Justin Timberlake', 'M', '1979-05-17', 'Integration Specialist', 'London');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (7, 'Mariah Carey', 'F', '1999-01-30', 'Sales Assistant', 'New York');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (8, 'Alejandro Sanz', 'M', '2008-11-22', 'Sales Assistant', 'New York');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (9, 'Lenny Kravitz', 'M', '1950-02-01', 'Pre-Sales Support', 'London');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (10, 'Avril Lavigne', 'F', '1981-09-20', 'Pre-Sales Support', 'London');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (11, 'Jessica Simpson', 'F', '1940-03-29', 'Software Engineer', 'Edinburgh');
+INSERT INTO participant(id, name, gender, birth, position, office) VALUES (12, 'Enrique Iglesias', 'M', '2007-09-30', 'Software Engineer', 'Edinburgh');
